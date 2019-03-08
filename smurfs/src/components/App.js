@@ -21,22 +21,21 @@ class App extends Component {
     return (
       <div className="App">
         <AddSmurfs />
-        {this.props.fetchingSmurfs && (<div className="fetch">Fetching smurf...</div>)}
+        {this.props.fetchingSmurfs && ( <div className="fetch">Fetching Smurf..</div> )}
         {this.props.smurfs.map(smurf => {
           return (
             <SmurfList {...smurf} key={smurf.id} />
-          )
+          );
         })}
       </div>
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    fetchingSmurfs: state.fetchingSmurfs,
-    smurfs: state.smurfs
-  }
-}
+
+const mapStateToProps = state => ({
+  fetchingSmurfs: state.fetchingSmurfs,
+  smurfs: state.smurfs
+});
 
 
 export default connect(mapStateToProps, {getSmurfs})(App);

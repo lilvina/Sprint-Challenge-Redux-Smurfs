@@ -9,6 +9,7 @@ const SmurfList = props => {
       <h2>{props.name}</h2>
       <p>{props.age}</p>
       <p>{props.height}</p>
+      <p>{props.id}</p>
       <button onClick={props.deleteSmurfs} value={props.id}>Delete Smurf</button>
     </div>
   )
