@@ -14,7 +14,8 @@ class AddSmurfs extends Component {
     event.preventDefault()
 
     const newSmurf = {...this.state}
-    this.prop.addSmurfs(newSmurf)
+    this.props.addSmurfs(newSmurf)
+    this.resetForm(event)
   }
 
   handleChange = event => {
